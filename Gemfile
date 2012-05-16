@@ -8,6 +8,7 @@ gem 'rails', '3.2.3'
 gem 'pg', '0.13.2'
 
 gem 'omniauth'
+gem 'omniauth-facebook'
 
 # gem 'backbone'
 
