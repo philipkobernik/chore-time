@@ -1,0 +1,9 @@
+%h1 hi there!
+
+- if current_user.class == User
+  %p current user is #{ current_user.first_name }
+- else
+  %p
+    You're not logged in yet.
+    %span
+      %a{:href => '/auth/facebook'} Connect using Facebook
