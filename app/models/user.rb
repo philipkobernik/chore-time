@@ -16,4 +16,21 @@ class User < ActiveRecord::Base
     end
   end
 
+  def housemates
+    [
+      { :id => 1, :name => "fred", :phone => 2061239843 },
+      { :id => 2, :name => "jane", :phone => 2061239843 },
+      { :id => 3, :name => "tom", :phone => 2061239843 }
+    ]
+
+  end
+
+  def chores
+    [
+      { id: 1, name: 'Clean the bathroom', frequency: 1, description: 'blah dee dahhhhh la blue de doo' },
+      { id: 2, name: 'Clean the kitchen', frequency: 2, description: 'blah dee dahhhhh la blue de doo' },
+      { id: 3, name: 'Keep living room tidy', frequency: 3, description: 'blah dee dahhhhh la blue de doo' },
+    ]
+  end
+
 end

@@ -1,0 +1,3 @@
+%img(:src='/assets/shared/x--button.png', :data-id="#{@housemate.get('id')}", :class="remove_item")
+%span.name= "#{@housemate.name()}"
+%span.phone= "<#{@housemate.get('phone')}>"

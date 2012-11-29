@@ -10,7 +10,7 @@ gem 'pg', '0.13.2'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-# gem 'backbone'
+gem 'backbone-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,10 +19,14 @@ group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
 
+  gem 'uglifier', '>= 1.0.3'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  # support haml and coffeescript templating and JST object in asset pipeline
+  gem 'haml_coffee_assets', '0.8.4'
+  gem 'execjs', '~> 1.3'
 end
 
 gem 'jquery-rails'

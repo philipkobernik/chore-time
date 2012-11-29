@@ -12,4 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require hamlcoffee
+//= require_directory ./common
+//= require_directory ./apps
+//= require_directory ./models
+//= require_directory ./collections
+//= require_directory ./views
+//= require_tree ../templates
+//
 //= require_tree .
+//

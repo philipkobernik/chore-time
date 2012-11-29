@@ -2,8 +2,36 @@
 
 - if current_user.class == User
   %p current user is #{ current_user.first_name }
+  - content_for :javascript do
+    :javascript
+      // Bootstrap backbone collection
+      ChoreTime.InitialSetupApp.init({
+        housemates: #{current_user.housemates.to_json},
+        chores: #{current_user.chores.to_json},
+      });
+  
 - else
   %p
     You're not logged in yet.
     %span
       %a{:href => '/auth/facebook'} Connect using Facebook
+
+#housemates
+  %form#new_housemate
+    %input{:type => 'text', :class => 'name'}
+    %input{:type => 'text', :class => 'phone'}
+    %button{:type => 'submit', :class => 'save'}
+      add housemate
+    %span#message
+
+  %ul
+
+#chores
+  %form#new_chore
+    %input{:type => 'text', :class => 'name'}
+    %input{:type => 'text', :class => 'description'}
+    %button{:type => 'submit', :class => 'save'}
+      add chore
+    %span#message
+
+  %ul
